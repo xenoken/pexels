@@ -1,4 +1,4 @@
-import "pexels_sources.dart";
+import 'pexels_sources.dart';
 
 class Video {
   final int id;
@@ -8,12 +8,10 @@ class Video {
   final String image;
   final String fullRes;
   final int duration;
-  final Map<String, VideoSource> sources;
+  final List<VideoSource> sources;
   const Video(this.id, this.width, this.height, this.url, this.image,
       this.fullRes, this.duration, this.sources);
 
-  /// [id] : the id of the video.
-  String get(String id) {
-    return sources[id].Link;
-  }
+  /// [index] : the index of the video file.
+  String get(int index) => sources[index].link;
 }

@@ -8,4 +8,6 @@ class SearchResult<T> {
 
   const SearchResult(
       this.page, this.perPage, this.totalResults, this.nextPage, this.items);
+
+  T operator [](int index)=> items[index];
 }

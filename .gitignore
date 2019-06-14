@@ -1,0 +1,4 @@
+api_key.dart
+.dart_tool/
+.packages
+pubspec.lock
