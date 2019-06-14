@@ -7,7 +7,7 @@ class Quota {
   int get getRequestsPerHour => _requestsPerHour;
   int get getReminaingRequestsPerMonth => _remainingRequestsPerMonth;
 
-  static Quota _singleton = null;
+  static Quota _singleton;
   Quota._internal({int remainingRequestsPerMonth = _requestsPerMonth}) {
     _remainingRequestsPerMonth = remainingRequestsPerMonth;
   }

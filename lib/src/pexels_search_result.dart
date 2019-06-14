@@ -1,4 +1,3 @@
-
 class SearchResult<T> {
   final int page;
   final int perPage;
@@ -9,5 +8,5 @@ class SearchResult<T> {
   const SearchResult(
       this.page, this.perPage, this.totalResults, this.nextPage, this.items);
 
-  T operator [](int index)=> items[index];
+  T operator [](int index) => items[index];
 }

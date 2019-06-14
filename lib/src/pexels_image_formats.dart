@@ -1,6 +1,5 @@
-
 enum ImageFormats {
-  /// The size of the original image 
+  /// The size of the original image
   /// is given with the attributes width and height.
   original,
 

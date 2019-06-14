@@ -22,12 +22,12 @@ class PexelsClient {
     var req = await client.getUrl(Uri.parse(url));
     req.headers.add('Authorization', apiKey);
     var resp = await req.close();
-    var data = null;
+    var data;
     if (resp.statusCode == 200) {
-      data =
-          await resp
+      data = await resp
           .transform(utf8.decoder)
-          .transform(const LineSplitter()).single;
+          .transform(const LineSplitter())
+          .single;
       // update quota.
       _quota = new Quota(
           remainingRequestsPerMonth:
@@ -175,7 +175,6 @@ class PexelsClient {
 
     return _buildVideo(videoData);
   }
-
 
   Video _buildVideo(videoData) {
     var videoFilesData = videoData['video_files'];

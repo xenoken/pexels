@@ -11,8 +11,7 @@ class Photo {
   final Map<String, PhotoSource> sources;
   const Photo(this.id, this.width, this.height, this.url, this.photographer,
       this.photographerURL, this.sources);
-      
+
   String get(ImageFormats format) =>
-    sources[format.toString().replaceAll('ImageFormats.', '')].link;
-  
+      sources[format.toString().replaceAll('ImageFormats.', '')].link;
 }

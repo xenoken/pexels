@@ -19,8 +19,7 @@ void main() {
       //arrange
       var client = PexelsClient(APIKey.value);
       //act
-      var p = await client.getVideo(
-          id: 857251);
+      var p = await client.getVideo(id: 857251);
       //assert
       expect(p == null, false);
     });
@@ -58,8 +57,7 @@ void main() {
       //arrange
       var client = PexelsClient(APIKey.value);
       //act
-      var p = await client.getPhoto(
-          id: 1366919);
+      var p = await client.getPhoto(id: 1366919);
       //assert
       expect(p == null, false);
     });
