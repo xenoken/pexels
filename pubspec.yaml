@@ -2,7 +2,6 @@ name: pexels
 version: 0.0.1
 description: Unofficial Pexels REST Client for Dart
 author: Kennedy Tochukwu Ekeoha <ekeohak@gmail.com>
-package_to: none
 repository: https://github.com/xenoken/pexels
 sdks:
   dart: ^2.0.0
