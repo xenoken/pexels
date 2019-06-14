@@ -90,7 +90,7 @@ class PexelsClient {
 
   /// [id] the id of the photo to return.
   /// if [id] is not specified, a random photo will be returned.
-  Future<Photo> getPhoto({int id = null}) async =>
+  Future<Photo> getPhoto({int id}) async =>
       id == null ? _getPhotoRandom() : _getPhotoFromID(id);
 
   Future<SearchResult<Photo>> searchPhotos(String query,
@@ -203,17 +203,17 @@ class PexelsClient {
     return null;
   }
 
-  Future<Video> getVideo({int id = null}) async =>
+  Future<Video> getVideo({int id}) async =>
       (id == null) ? _getVideoRandom() : _getVideoFromID(id);
 
   Future<SearchResult<Video>> searchVideos(String query,
       {Collection collection = Collection.Regular,
       int resultsPerPage = 15,
       int page = 1,
-      int minWidth = null,
-      int maxWidth = null,
-      int minDuration = null,
-      int maxDuration = null}) async {
+      int minWidth,
+      int maxWidth,
+      int minDuration,
+      int maxDuration}) async {
     var url = _getVideoEndpoint(collection, page, resultsPerPage, query);
 
     String data = await _getData(url);

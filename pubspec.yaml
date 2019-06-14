@@ -1,5 +1,5 @@
 name: pexels
-version: 0.1.0
+version: 0.1.1
 description: Unofficial wrapper of Pexels REST API for the Dart Language.
 author: Kennedy Tochukwu Ekeoha <ekeohak@gmail.com>
 repository: https://github.com/xenoken/pexels
