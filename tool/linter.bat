@@ -1,0 +1,1 @@
+dartanalyzer --packages ../.packages --options ../analyzer_options.yaml ..
